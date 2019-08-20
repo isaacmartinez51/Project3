@@ -1,0 +1,14 @@
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\bin\Debug\netcoreapp2.1\Continental.CUP.Repositories.deps.json
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\bin\Debug\netcoreapp2.1\Continental.CUP.Repositories.dll
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\obj\Debug\netcoreapp2.1\Continental.CUP.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\obj\Debug\netcoreapp2.1\Continental.CUP.Repositories.AssemblyInfoInputs.cache
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\obj\Debug\netcoreapp2.1\Continental.CUP.Repositories.AssemblyInfo.cs
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\obj\Debug\netcoreapp2.1\Continental.CUP.Repositories.csprojAssemblyReference.cache
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\bin\Debug\netcoreapp2.1\Continental.CUP.Repositories.runtimeconfig.json
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\bin\Debug\netcoreapp2.1\Continental.CUP.Repositories.runtimeconfig.dev.json
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\bin\Debug\netcoreapp2.1\Continental.CUP.Repositories.pdb
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\obj\Debug\netcoreapp2.1\Continental.CUP.Repositories.dll
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\obj\Debug\netcoreapp2.1\Continental.CUP.Repositories.pdb
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Logging.Console.dll
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\bin\Debug\netcoreapp2.1\Microsoft.Extensions.Logging.Console.xml
+C:\Users\angel.martinez\Desktop\Conti.v2\ContinentalCups.v2\Continental.CUP.Repositories\obj\Debug\netcoreapp2.1\Continental.CUP.Repositories.csproj.CopyComplete
