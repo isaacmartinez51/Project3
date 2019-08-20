@@ -1,0 +1,47 @@
+﻿@model Continental.CUP.Repositories.ViewModels.UserVModel
+@{
+    Layout = "_AuthLayout";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 center-block">
+            <div class="well no-padding">
+                <form asp-action="Index" id="login-form" class="smart-form client-form">
+                    <header>
+                        Continental Inicio de sesión
+                    </header>
+
+                    <fieldset>
+                        <section>
+                            <label asp-for="UserName" class="label"></label>
+                            <label class="input">
+                                <i class="icon-append fa fa-user"></i>
+                                <input asp-for="UserName"  class="form-control" />
+                                <span asp-validation-for="UserName" class="text-danger"></span>
+                                <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> Please enter email address/username</b>
+                            </label>
+                        </section>
+
+                        <section>
+                            <label asp-for="Password" class="label"></label>
+                            <label class="input">
+                                <i class="icon-append fa fa-lock"></i>
+                                <input asp-for="Password" class="form-control" type="password" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                                <b class="tooltip tooltip-top-right"><i class="fa fa-lock txt-color-teal"></i> Enter your password</b>
+                            </label>
+                        </section>
+                    </fieldset>
+                    <footer>
+                        <button type="submit" class="btn btn-primary">
+                            Iniciar sesión
+                        </button>
+                    </footer>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

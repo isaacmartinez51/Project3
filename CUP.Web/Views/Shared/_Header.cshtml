@@ -1,0 +1,118 @@
+@using Continental.CUP.Web.Classes.Extensions
+@using Continental.CUP.Repositories.ViewModels
+
+@{
+    UserVModel data = this.Context.Session.Get<UserVModel>("User");
+}
+
+<!-- HEADER -->
+<style>
+    .truncate-ellipsis {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+        .truncate-ellipsis > * {
+            display: table-cell;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+    nav ul li a {
+        color: black !important;
+        background-color: #C0C0C0;
+    }
+
+
+    aside {
+        background-color: gray !important;
+        background-image: none !important;
+    }
+
+    .menu-on-top nav ul ul li:hover > a {
+        background-color: #A5A5A5 !important;
+        color: white !important;
+    }
+
+    .menu-on-top nav ul li a:hover {
+        background-color: #A5A5A5 !important;
+        color: white !important;
+    }
+
+        .menu-on-top nav ul li a:hover span {
+            background-color: #A5A5A5 !important;
+            color: white !important;
+        }
+
+    #logo-group {
+        width: 130px !important;
+    }
+</style>
+<!-- HEADER -->
+<header id="header">
+    <div id="logo-group">
+        <!-- PLACE YOUR LOGO HERE -->
+        <span id="logo">
+            <a href="/">
+                <img src="~/img/logo.png" alt="SmartAdmin">
+            </a>
+        </span>
+    </div>
+
+    <!-- end projects dropdown -->
+    <!-- pulled right: nav area -->
+    <div class="pull-right">
+
+        <!-- collapse menu button -->
+        <div id="hide-menu" class="btn-header pull-right">
+            <span>
+                <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu">
+                    <i class="fa fa-reorder"></i>
+                </a>
+            </span>
+        </div>
+        <!-- end collapse menu -->
+        <!-- #MOBILE -->
+        <!-- Top menu profile link : this shows only when top menu is active -->
+        @if (null != data)
+        {
+            <ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
+                <li class="">
+                    <a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown">
+                        @data?.UserName<img src="~/img/avatars/sunny.png" alt="John Doe" class="online" />
+                    </a>
+                    <ul class="dropdown-menu pull-right">
+                        <li>
+                            <a asp-controller="User" asp-action="Info" class="padding-10 padding-top-5 padding-bottom-5">
+                                <i class="fa fa-cog fa-lg"></i> <strong><u>I</u>nformaci&oacute;n</strong>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a asp-controller="Login" asp-action="Logout" class="padding-10 padding-top-5 padding-bottom-5" data-action="userLogout">
+                                <i class="fa fa-sign-out fa-lg"></i> <strong><u>L</u>ogout</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        }
+
+        <!-- logout button -->
+        <div id="logout" class="btn-header transparent pull-right">
+            <span>
+                <a asp-controller="Login" asp-action="Logout" title="Cerrar sesión" data-action="userLogout" data-logout-msg="¿ Estás seguro de cerrar la sesi&oacute;n ?">
+                    <i class="fa fa-sign-out"></i>
+                </a>
+            </span>
+        </div>
+        <!-- end logout button -->
+        <!-- search mobile button (this is hidden till mobile view port) -->
+        <!-- end search mobile button -->
+        <!-- input: search field -->
+    </div>
+    <!-- end pulled right: nav area -->
+</header>
+<!-- END HEADER -->

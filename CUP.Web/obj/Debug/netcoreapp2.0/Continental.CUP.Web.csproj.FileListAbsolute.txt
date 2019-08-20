@@ -1,0 +1,16 @@
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\bin\Debug\netcoreapp2.0\Continental.CUP.Web.deps.json
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\bin\Debug\netcoreapp2.0\Continental.CUP.Web.runtimeconfig.json
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\bin\Debug\netcoreapp2.0\Continental.CUP.Web.runtimeconfig.dev.json
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\bin\Debug\netcoreapp2.0\Continental.CUP.Web.dll
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\bin\Debug\netcoreapp2.0\Continental.CUP.Web.pdb
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\bin\Debug\netcoreapp2.0\Continental.CUP.Business.dll
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\bin\Debug\netcoreapp2.0\Continental.CUP.Common.dll
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\bin\Debug\netcoreapp2.0\Continental.CUP.Business.pdb
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\bin\Debug\netcoreapp2.0\Continental.CUP.Common.pdb
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\obj\Debug\netcoreapp2.0\Continental.CUP.Web.csprojAssemblyReference.cache
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\obj\Debug\netcoreapp2.0\Continental.CUP.Web.csproj.CoreCompileInputs.cache
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\obj\Debug\netcoreapp2.0\Continental.CUP.Web.AssemblyInfoInputs.cache
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\obj\Debug\netcoreapp2.0\Continental.CUP.Web.AssemblyInfo.cs
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\obj\Debug\netcoreapp2.0\Continental.CUP.Web.csproj.CopyComplete
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\obj\Debug\netcoreapp2.0\Continental.CUP.Web.dll
+C:\ARepoIsaac\Repo\Continental.CUP\CUP.Web\obj\Debug\netcoreapp2.0\Continental.CUP.Web.pdb

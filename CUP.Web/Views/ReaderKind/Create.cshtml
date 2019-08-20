@@ -1,0 +1,36 @@
+﻿@model Continental.CUP.Repositories.ViewModels.ReaderKindVModel
+@{
+    ViewData["Title"] = "Crear un Modelo de Reader";
+}
+<h2>Nuevo</h2>
+<h4>Modelo de Reader</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Brand" class="control-label"></label>
+                <input asp-for="Brand" class="form-control" />
+                <span asp-validation-for="Brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModelName" class="control-label"></label>
+                <input asp-for="ModelName" class="form-control" />
+                <span asp-validation-for="ModelName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AntennaNumber" class="control-label"></label>
+                <input asp-for="AntennaNumber" class="form-control" />
+                <span asp-validation-for="AntennaNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Regresar a la lista</a>
+</div>
+

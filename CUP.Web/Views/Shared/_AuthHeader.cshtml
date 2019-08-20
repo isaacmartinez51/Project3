@@ -1,0 +1,52 @@
+<!-- HEADER -->
+
+<style>
+    .truncate-ellipsis {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+        .truncate-ellipsis > * {
+            display: table-cell;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+</style>
+<header id="header">
+    <div id="logo-group" class="h-100 d-inline-block">
+        <div class="container">
+            <div class="truncate-ellipsis">
+                <h4 class="semi-bold" style="overflow: hidden;text-overflow: ellipsis"><span><img src="Images/GEM-DIAMOND-LOGO-FOR-UI.png" height="95"></span>CONTROL RASTREABILIDAD DE CONTENEDORES y PRODUCTO</h4>
+            </div>
+        </div>
+        <!-- END LOGO PLACEHOLDER -->
+    </div>
+
+    <!-- pulled right: nav area -->
+    <div class="pull-right">
+
+        <!-- collapse menu button -->
+        <div id="hide-menu" class="btn-header pull-right">
+            <span>
+                <a href="javascript:void(0);" data-action="toggleMenu" title="Collapse Menu">
+                    <i class="fa fa-reorder"></i>
+                </a>
+            </span>
+        </div>
+        <!-- end collapse menu -->
+        <!-- #MOBILE -->
+        <!-- Top menu profile link : this shows only when top menu is active -->
+        <ul id="mobile-profile-img" class="header-dropdown-list hidden-xs padding-5">
+            <li class="">
+                <a href="#" class="dropdown-toggle no-margin userdropdown" data-toggle="dropdown">
+                    <span>Jonhn Doe</span><img src="~/img/avatars/sunny.png" alt="John Doe" class="online" />
+                </a>
+
+            </li>
+        </ul>
+    </div>
+    <!-- end pulled right: nav area -->
+</header>
+<!-- END HEADER -->

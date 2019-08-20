@@ -1,0 +1,170 @@
+@*@using Continental.CUP.Web.Classes.Extensions
+@using Continental.CUP.Business.ViewModel.Base
+
+@{
+    UserModel data = this.Context.Session.Get<UserModel>("User");
+}*@
+<!-- Left panel : Navigation area -->
+<!-- Note: This width of the aside area can be adjusted through LESS variables -->
+<style>
+    .menu-item-parent {
+        min-width: 100px !important;
+    }
+
+    .menu-on-top aside#left-panel nav > ul > li {
+        border: none !important;
+    }
+</style>
+<aside id="left-panel">
+    <!-- User info -->
+    <div class="login-info">
+        <span>
+            <!-- User image size is adjusted inside CSS, it should stay as it -->
+            <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
+                <img src="~/img/avatars/sunny.png" alt="me" class="online" />
+                <span>@*@data?.UserName*@</span>
+                <i class="fa fa-angle-down"></i>
+            </a>
+        </span>
+    </div>
+    <!-- end user info -->
+    <!-- NAVIGATION : This navigation is also responsive-->
+    <nav>
+        <!--
+        NOTE: Notice the gaps after each icon usage <i></i>..
+        Please note that these links work a bit different than
+        traditional href="" links. See documentation for details.
+        -->
+
+        <ul>
+            <li>
+                <a title="Dashboard" asp-action="Index" asp-controller="Dashboard">
+                    <i class="fa fa-lg fa-fw fa-home"></i> <span class="menu-item-parent">Dashboard</span>
+                </a>
+
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-lg fa-fw fa-location-arrow txt-color-blue"></i> <span class="menu-item-parent">Ubicaciones</span>
+                </a>
+                <ul>
+                    @if (Continental.CUP.Web.Classes.HelperAction.IsValid("ContainerType", "Index"))
+                    {
+                        <li>
+                            <a asp-action="Index" asp-controller="ContainerType" title="Tipos de Contenedores">
+                                <i class="fa fa-lg fa-inbox fa-picture-o"></i> <span>Tipos de Contenedores </span>
+                            </a>
+                        </li>
+                    }
+                    @if (Continental.CUP.Web.Classes.HelperAction.IsValid("ContainerParam", "Index"))
+                    {
+                        <li>
+                            <a asp-action="Index" asp-controller="ContainerParam" title="Tipos de Contenedores">
+                                <i class="fa fa-lg fa-check-circle fa-picture-o"></i> <span>Parametros de Tipos de Contenedores </span>
+                            </a>
+                        </li>
+                    }
+                    @if (Continental.CUP.Web.Classes.HelperAction.IsValid("TagType", "Index"))
+                    {
+                        <li>
+                            <a asp-action="Index" asp-controller="TagType" title="Tipos de Tags">
+                                <i class="fa fa-lg fa-fax fa-picture-o"></i> <span>Tipos de Tags </span>
+                            </a>
+                        </li>
+                    }
+                    @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Tag", "Index"))
+                    {
+                        <li>
+                            <a asp-action="Index" asp-controller="Tag" title="Tags de Localidades">
+                                <i class="fa fa-lg fa-suitcase fa-picture-o"></i> <span>Tags de Localidades</span>
+                            </a>
+                        </li>
+                    }
+                    @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Location", "Index"))
+                    {
+                        <li>
+                            <a asp-action="Index" asp-controller="Location" title="Localidades">
+                                <i class="fa fa-lg fa-map-marker fa-picture-o"></i> <span>Localidades</span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li is-active-route asp-controller="Tables">
+                <a href="#">
+                    <i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Dispositivos</span>
+                </a>
+                <ul>
+                    @if (Continental.CUP.Web.Classes.HelperAction.IsValid("ReaderKind", "Index"))
+                    {
+                        <li>
+                            <a asp-action="Index" asp-controller="ReaderKind" title="Tipos de Readers de Portales">
+                                <i class="fa fa-lg fa-fw fa-picture-o"></i> <span>Tipos de Readers de Portales</span>
+                            </a>
+                        </li>
+                    }
+                    @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Reader", "Index"))
+                    {
+                        <li>
+                            <a asp-action="Index" asp-controller="Reader" title="Readers de Portales">
+                                <i class="fa fa-lg fa-fw fa-picture-o"></i> <span>Readers de Portales</span>
+                            </a>
+                        </li>
+                    }
+                    @if (Continental.CUP.Web.Classes.HelperAction.IsValid("StationType", "Index"))
+                    {
+                        <li>
+                            <a asp-action="Index" asp-controller="StationType" title="Tipos de Estaciones">
+                                <i class="fa fa-lg fa-fw fa-picture-o"></i> <span>Tipos de Estaciones</span>
+                            </a>
+                        </li>
+                    }
+                    @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Station", "Index"))
+                    {
+                        <li>
+                            <a asp-action="Index" asp-controller="Station" title="Estaciones">
+                                <i class="fa fa-lg fa-fw fa-picture-o"></i> <span>Estaciones</span>
+                            </a>
+                        </li>
+                    }
+                    @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Device", "Index"))
+                    {
+                        <li>
+                            <a asp-action="Index" asp-controller="Device" title="Dispositivos">
+                                <i class="fa fa-lg fa-fw fa-picture-o"></i> <span>Dispositivos de Estaciones</span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-lg fa-fw fa-lock txt-color-blue"></i> <span class="menu-item-parent">Seguridad</span>
+                </a>
+                <ul>
+                    @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Usuarios", "Index"))
+                    {
+                        <li>
+                            <a asp-action="Index" asp-controller="User" title="Usuarios">
+                                <i class="fa fa-lg fa-user-circle fa-picture-o"></i> <span>Usuarios</span>
+                            </a>
+                        </li>
+                    }
+                    @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Role", "Index"))
+                    {
+                        <li>
+                            <a asp-action="Index" asp-controller="Role" title="Perfiles">
+                                <i class="fa fa-lg fa-fw fa-picture-o"></i> <span>Perfiles</span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <a asp-controller="Intel" asp-action="Variations" asp-show-when="" class="btn btn-primary nav-demo-btn"><i class="fa fa-info-circle"></i> SmartAdmin Package (187 MB)</a>
+    <span class="minifyme" data-action="minifyMenu">
+        <i class="fa fa-arrow-circle-left hit"></i>
+    </span>
+</aside>
+<!-- END NAVIGATION -->

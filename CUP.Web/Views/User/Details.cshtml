@@ -1,0 +1,68 @@
+﻿@model Continental.CUP.Repositories.ViewModels.UserVModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles de usuario</h2>
+
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirtsName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirtsName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+    </dl>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Perfil</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.UserRoleModelList)
+                        {
+                            <tr>
+                                <td><input id="IDParamList" name="IDParamList" class="form-control" value="@item.UserID|@item.RoleID" type="checkbox" @(item.Active ? "checked=checked" : "") readonly="readonly" disabled="disabled" /></td>
+                                <td>
+                                    <span class="form-control">@item.Name</span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.UserID">Editar</a> |
+    <a asp-action="Index">Regresar a la lista</a>
+</div>

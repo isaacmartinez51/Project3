@@ -1,0 +1,65 @@
+﻿
+@*@model Continental.CUP.Web.Models.OrderVModel*@
+@*@model Continental.CUP.Business.ViewModel.Base.OrderModel*@
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container">
+    <div class="row center-block">
+        <div class="col-md-4 center-block">
+            <div class="well no-padding">
+                <form id="" class="smart-form client-form" method="post">
+                    <header>
+                        Embarque
+                    </header>
+
+                    <fieldset>
+                        Ingresa el número del Embarque.
+                        <section>
+                            <label class="label">No.-Embarque</label>
+                            <label class="input">
+                                <i class="icon-append glyphicon glyphicon-inbox"></i>
+                                <input id="Embarque" @*asp-for=""*@ class="form-control" required />
+                                <span @*asp-validation-for="Number"*@ class="text-danger"></span>
+                                <b class="tooltip tooltip-top-right"><i class="fa fa-user txt-color-teal"></i> El número del embarque es requerido.</b>
+                            </label>
+                        </section>
+
+                    </fieldset>
+                    <footer>
+
+                        <button id="Enviar" type="submit" class="btn btn-primary">
+                            Enviar
+                        </button>
+
+
+                    </footer>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+        @if (ViewBag.Show == true)
+        {
+            @*@Html.Partial("_ShipmentDetail", Model.ListOrderDetail)*@
+            <partial name="_ShipmentDetail" model="Model" />
+
+        }
+
+    </div>
+</div>
+@section Scripts {
+
+    <script type="text/javascript">
+                                        //$(document).ready(function () {
+                                        //    if ($("#Orden").val().length > 0) {
+                                        //        $("#Enviar").attr("disabled", false)
+                                        //        console.log($("#Orden").val().length + "si");
+                                        //    } else {
+                                        //        $("#Enviar").attr("disabled", true)
+                                        //        console.log($("#Orden").val().length + " no");
+                                        //    }
+
+                                        //});
+    </script>
+}

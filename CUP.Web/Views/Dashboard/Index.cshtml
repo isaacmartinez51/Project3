@@ -1,0 +1,258 @@
+﻿@{
+    Layout = "_Layout";
+}
+<div class="row">
+    <header>
+        <h3>
+            <a href="http://108.161.135.57:8500/">
+                <img src="/Images/Home.png" height="30">
+            </a> <span style="color:#c1d34e; font:small-caps">&gt;</span> Dashboard
+        </h3>
+    </header>
+</div>
+
+<style>
+    .icon-module {
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    fieldset {
+        border-radius: 10px;
+        background: white;
+        margin: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        box-shadow: 0 0 10px rgba(0,0,0,.3);
+        position: relative;
+        border: 1px groove threedface;
+    }
+
+        fieldset > legend {
+            background-color: white;
+            color: #999999;
+            border: none;
+            width: auto;
+            margin-bottom: 0px;
+        }
+
+    article .fa {
+        border-radius: 10px;
+        background-color: #FFA800 !important;
+        color: white !important;
+        box-shadow: 0 0 15px rgba(0,0,0,.3);
+        width: 80px;
+        height: 80px;
+        padding: 5px;
+    }
+</style>
+
+<div class="row">
+    <!-- ---------------------------------------------------------------DASHBOARD-------------------------------------------------------- -->
+    <!-- NEW WIDGET START -->
+    <article class="col-sm-12 col-md-12 col-lg-6 sortable-grid ui-sortable">
+        <fieldset>
+            <legend>Ubicaciones</legend>
+
+            <div class="row">
+
+                <div class="col-sm-4 text-center">
+                    @if (Continental.CUP.Web.Classes.HelperAction.IsValid("ContainerType", "Index"))
+                    {
+                        <a asp-action="Index" asp-controller="ContainerType" title="Tipos de Contenedores">
+                            <div class="text-center">
+                                <i class="fa fa-cube fa-5x text-muted lg"></i>
+                            </div>
+                            Ubicaciones
+                        </a>
+                    }
+                </div>
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("ContainerParam", "Index"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Index" asp-controller="ContainerParam" title="Parametros de Tipos de Contenedores">
+                            <div class="text-center">
+                                <i class="fa fa-sliders fa-5x text-muted lg"></i>
+                            </div>
+                            Parametros de Tipos de Contenedores
+                        </a>
+                    </div>
+                }
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("TagType", "Index"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Index" asp-controller="TagType" title="Tipos de Tags">
+                            <div class="text-center">
+                                <i class="fa fa-tag fa-5x text-muted lg"></i>
+                            </div>
+                            Tipos de Tags
+                        </a>
+                    </div>
+                }
+            </div>
+
+            <hr>
+
+            <div class="row">
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Tag", "Index"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Index" asp-controller="Tag" title="Tags de Localidades">
+                            <div class="text-center">
+                                <i class="fa fa-tags fa-5x text-muted lg"></i>
+                            </div>
+                            Tags de Localidades
+                        </a>
+                    </div>
+                }
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Location", "Index"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Index" asp-controller="Location" title="Localidades">
+                            <div class="text-center">
+                                <i class="fa fa-map-marker fa-5x text-muted lg"></i>
+                            </div>
+                            Localidades
+                        </a>
+                    </div>
+                }
+            </div>
+
+        </fieldset>
+    </article>
+    <article class="col-sm-12 col-md-12 col-lg-6 sortable-grid ui-sortable">
+        <fieldset>
+            <legend>Dispositivos</legend>
+            <div class="row">
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("ReaderKind", "Index"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Index" asp-controller="ReaderKind" title="Tipos de Readers de Portales">
+                            <div class="text-center">
+                                <i class="fa fa-picture-o fa-5x text-muted lg"></i>
+                            </div>
+                            Tipos de Readers de Portales
+                        </a>
+                    </div>
+                }
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Reader", "Index"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Index" asp-controller="Reader" title="Readers de Portales">
+                            <div class="text-center">
+                                <i class="fa fa-picture-o fa-5x text-muted lg"></i>
+                            </div>
+                            Readers de Portales
+                        </a>
+                    </div>
+                }
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("StationType", "Index"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Index" asp-controller="StationType" title="Tipos de Estaciones">
+                            <div class="text-center">
+                                <i class="fa fa-picture-o fa-5x text-muted lg"></i>
+                            </div>
+                            Tipos de Estaciones
+                        </a>
+                    </div>
+                }
+            </div>
+            <hr>
+            <div class="row">
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Station", "Index"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Index" asp-controller="Station" title="Estaciones">
+                            <div class="text-center">
+                                <i class="fa fa-picture-o fa-5x text-muted lg"></i>
+                            </div>
+                            Estaciones
+                        </a>
+                    </div>
+                }
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Device", "Index"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Index" asp-controller="Device" title="Dispositivos">
+                            <div class="text-center">
+                                <i class="fa fa-picture-o fa-5x text-muted lg"></i>
+                            </div>
+                            Dispositivos de Estaciones
+                        </a>
+                    </div>
+                }
+            </div>
+        </fieldset>
+    </article>
+    <article class="col-sm-12 col-md-12 col-lg-6 sortable-grid ui-sortable">
+        <fieldset>
+            <legend>Seguridad</legend>
+            <div class="row">
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Usuarios", "Index"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Index" asp-controller="User" title="Usuarios">
+                            <div class="text-center">
+                                <i class="fa fa-user fa-5x text-muted lg"></i>
+                            </div>
+                            Usuarios
+                        </a>
+                    </div>
+                }
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Role", "Index"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Index" asp-controller="Role" title="Perfiles">
+                            <div class="text-center">
+                                <i class="fa fa-picture-o fa-5x text-muted lg"></i>
+                            </div>
+                            Perfiles
+                        </a>
+                    </div>
+                }
+            </div>
+        </fieldset>
+    </article>
+    <article class="col-sm-12 col-md-12 col-lg-6 sortable-grid ui-sortable">
+        <fieldset>
+            <legend>Etiquetas</legend>
+            <div class="row">
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("PrintLabel", "Index"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Index" asp-controller="PrintLabel" title="Print">
+                            <div class="text-center">
+                                <i class="fa fa-user fa-5x text-muted lg"></i>
+                            </div>
+                            Etiqueta BlackFlush
+                        </a>
+                    </div>
+                }
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Shipment", "Portal"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Index" asp-controller="Shipment" title="Portal">
+                            <div class="text-center">
+                                <i class="fa fa-user fa-5x text-muted lg"></i>
+                            </div>
+                            Portal
+                        </a>
+                    </div>
+                }
+                @if (Continental.CUP.Web.Classes.HelperAction.IsValid("Shipment", "MonitorShipment"))
+                {
+                    <div class="col-sm-4 text-center">
+                        <a asp-action="Monitor" asp-controller="Shipment" title="Monitorear">
+                            <div class="text-center">
+                                <i class="fa fa-user fa-5x text-muted lg"></i>
+                            </div>
+                            Monitorear
+                        </a>
+                    </div>
+                }
+            </div>
+        </fieldset>
+    </article>
+</div>
